@@ -7,7 +7,6 @@ const isActive = (history, path) => {
     } else {
         return {color: '#ffffff'}
     }
-
 }
 
 const Menu = ({history}) => (
