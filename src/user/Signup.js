@@ -76,7 +76,7 @@ const Signup = () => {
 
     const showSuccess = () => (
         <div className='alert alert-info' style={{display: success ? '' : 'none'}}>
-            Your account has been created. Please <Link to='/signin'>Signin</Link>
+            Your account has been created. Please <Link to='/signin'>Sign in</Link>
         </div>
     )
 
@@ -84,8 +84,8 @@ const Signup = () => {
 
     return (
         <Layout 
-            title="Signup"
-            description="Signup to 4scent store" 
+            title="Sign Up"
+            description="Please sign up to use 4scent store" 
             className="container col-md-8 offset-md-2"     
         >
         {showSuccess()}
