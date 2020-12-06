@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Redirect } from 'react-router-dom'
 import Layout from '../core/Layout'
-import {signin} from '../auth'
+import { signin, authenticate } from '../auth'
 
 const Signin = () => {
     const [values, setValues] = useState({ 
@@ -28,9 +28,11 @@ const Signin = () => {
             if(data.error) {
                 setValues({...values, error: data.error, loading: false})
             } else {
-                setValues({
-                    ...values,
-                    redirectToReferrer: true
+                authenticate(data, () => {
+                    setValues({
+                        ...values,
+                        redirectToReferrer: true
+                    })
                 })
             }
         })
@@ -75,7 +77,7 @@ const Signin = () => {
 
     return (
         <Layout 
-            title="Signup"
+            title="Sign in"
             description="Signup to 4scent store" 
             className="container col-md-8 offset-md-2"     
         >
