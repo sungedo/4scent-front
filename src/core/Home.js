@@ -35,7 +35,7 @@ const Home = () => {
 
 
     return (
-        <Layout title="Welcome to 4scent Store" description="We carry high-quality scented products for car and home decor" className='container-fluid'>
+        <Layout title="Welcome to 4scent store" description="We carry high-quality scented products for car and home decor" className='container-fluid'>
             <h2 className='mb-4'>New Arrivals</h2>
             <div className='row'>
                 {productsByArrival.map((product, i) => (<Card key={i} product={product}/>))}
