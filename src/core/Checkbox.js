@@ -17,6 +17,8 @@ const Checkbox = ({categories, handleFilters}) => {
         handleFilters(newCheckedCategoryId)
     }
 
+    console.log('wtf', categories)
+
     return categories.map((c, i) => (
         <li key={i} className='list-unstyled'>
             <input onChange={handToggle(c._id)} value={checked.indexOf(c._id === -1)}type='checkbox' className='form-check-input'/>

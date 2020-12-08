@@ -6,11 +6,11 @@ const Card = ({product}) => {
     return (
         <div className='col-4 mb-3'>
             <div className='card'>
-                <div className='card-header'>{product.name}</div>
+                <div className='card-header'>{product.name.substring(0,200)}</div>
                 <div className='card-body'>
                 <ShowImage item={product} url='product'/>
                     {/* <p>{product.description}</p> */}
-                    <p>${product.price}</p>
+                    <h4>${product.price}</h4>
                     <Link to='/'>
                         <button className='btn btn-outline-primary mt-2 mb-2 mr-2'>
                             View Product
